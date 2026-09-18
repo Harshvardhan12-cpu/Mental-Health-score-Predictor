@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Score Predictor</title>
+    <meta name="description" content="AI-powered mental health score predictor. Assess your wellbeing based on daily habits and lifestyle choices.">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Aurora / Orb Background -->
+    <div class="aurora-bg" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+        <div class="toggle-track">
+            <div class="toggle-knob"></div>
+        </div>
+        <span id="themeLabel">Light</span>
+    </button>
+
+    <!-- App Wrapper -->
+    <div class="app-wrapper">
+
+        <!-- Header -->
+        <header class="app-header">
+            <div class="header-icon-box">
+                <i class="fa-solid fa-heart-pulse"></i>
+            </div>
+            <h1 class="app-title">Mental Health Predictor</h1>
+            <p class="app-subtitle">Enter your lifestyle habits to receive an AI-powered wellbeing assessment.</p>
+        </header>
+
+        <!-- Main Card -->
+        <main class="main-card" role="main">
+            <div class="card-inner">
+
+                <!-- ══ FORM PANEL ══ -->
+                <section class="form-panel" aria-label="Prediction Form">
+                    <p class="section-label"><i class="fa-solid fa-sliders"></i> Your Details</p>
+
+                    <form id="predictionForm" novalidate>
+
+                        <!-- Country -->
+                        <div class="form-group">
+                            <label class="field-label" for="country">Country</label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-globe input-icon"></i>
+                                <select class="field-select" id="country" name="Country" required>
+                                    <option value="" disabled selected>Select your country</option>
+                                    <option value="USA">🇺🇸 USA</option>
+                                    <option value="Canada">🇨🇦 Canada</option>
+                                    <option value="India">🇮🇳 India</option>
+                                    <option value="UK">🇬🇧 UK</option>
+                                    <option value="Australia">🇦🇺 Australia</option>
+                                    <option value="Germany">🇩🇪 Germany</option>
+                                    <option value="Japan">🇯🇵 Japan</option>
+                                    <option value="Brazil">🇧🇷 Brazil</option>
+                                    <option value="Bangladesh">🇧🇩 Bangladesh</option>
+                                    <option value="Pakistan">🇵🇰 Pakistan</option>
+                                    <option value="Nepal">🇳🇵 Nepal</option>
+                                    <option value="Bhutan">🇧🇹 Bhutan</option>
+                                    <option value="Sri Lanka">🇱🇰 Sri Lanka</option>
+                                    <option value="Maldives">🇲🇻 Maldives</option>
+                                    <option value="Lebanon">🇱🇧 Lebanon</option>
+                                    <option value="Iraq">🇮🇶 Iraq</option>
+                                    <option value="Yemen">🇾🇪 Yemen</option>
+                                    <option value="Syria">🇸🇾 Syria</option>
+                                    <option value="Afghanistan">🇦🇫 Afghanistan</option>
+                                    <option value="Other">🌐 Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Academic Level & Platform -->
+                        <div class="form-row">
+                            <div>
+                                <label class="field-label" for="academicLevel">Academic Level</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-graduation-cap input-icon"></i>
+                                    <select class="field-select" id="academicLevel" name="Academic_Level" required>
+                                        <option value="High School">High School</option>
+                                        <option value="Undergraduate">Undergraduate</option>
+                                        <option value="Postgraduate">Postgraduate</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+
+                                   <div>
+                                <label class="field-label" for="academicLevel">Gender</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-graduation-cap input-icon"></i>
+                                    <select class="field-select" id="academicLevel" name="Gender" required>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                     
+                                    </select>
+                                </div>
+                            </div>
+                    <div>
+                                <label class="field-label" for="age">Age</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-book-open input-icon"></i>
+                                    <input type="number" class="field-input" id="studyHours" name="Age"
+                                           step="0.5" min="10" max="100" placeholder="e.g. 25" required>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                                <label class="field-label" for="platform">Most Used Platform</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-icons input-icon"></i>
+                                    <select class="field-select" id="platform" name="Most_Used_Platform" required>
+                                        <option value="Instagram">Instagram</option>
+                                        <option value="YouTube">YouTube</option>
+                                        <option value="TikTok">WhatsApp</option>
+                                        <option value="TikTok">TikTok</option>
+                                        <option value="Reddit">Facebook</option>
+                                        <option value="X/Twitter">Twitter / X</option>
+                                        <option value="Other">LinkedIn</option>
+                                        <option value="Other">Snapchat</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purpose of Use -->
+                        <div class="form-group">
+                            <label class="field-label" for="purpose">Purpose of Use</label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-compass input-icon"></i>
+                                <select class="field-select" id="purpose" name="Purpose_Of_Use" required>
+                                    <option value="Entertainment">Entertainment</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Networking">Networking</option>
+                                    <option value="Work">News / Work</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Daily Usage & Study Hours -->
+                        <div class="form-row">
+                            <div>
+                                <label class="field-label" for="usageHours">Daily Usage (hrs)</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-mobile-screen input-icon"></i>
+                                    <input type="number" class="field-input" id="usageHours" name="Avg_Daily_Usage_Hours"
+                                           step="0.5" min="0" max="24" placeholder="e.g. 4.5" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="field-label" for="studyHours">Study (hrs/day)</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-book-open input-icon"></i>
+                                    <input type="number" class="field-input" id="studyHours" name="Study_Hours"
+                                           step="0.5" min="0" max="24" placeholder="e.g. 6.0" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Physical Activity & Sleep -->
+                        <div class="form-row">
+                            <div>
+                                <label class="field-label" for="physicalActivity">Exercise (hrs/day)</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-person-running input-icon"></i>
+                                    <input type="number" class="field-input" id="physicalActivity" name="Physical_Activity_Hours"
+                                           step="0.5" min="0" max="24" placeholder="e.g. 1.0" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="field-label" for="sleepHours">Sleep (hrs/night)</label>
+                                <div class="input-wrap">
+                                    <i class="fa-solid fa-moon input-icon"></i>
+                                    <input type="number" class="field-input" id="sleepHours" name="Sleep_Hours_Per_Night"
+                                           step="0.5" min="0" max="24" placeholder="e.g. 7.5" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stress Level -->
+                        <div class="form-group">
+                            <label class="field-label" for="stressLevel">Stress Level</label>
+                            <div class="input-wrap">
+                                <i class="fa-solid fa-face-meh input-icon"></i>
+                                <select class="field-select" id="stressLevel" name="Stress_Level" required>
+                                    <option value="" disabled selected>Select stress level</option>
+                                    <option value="Low">😊 Low</option>
+                                    <option value="Medium">😐 Medium</option>
+                                    <option value="High">😟 High</option>
+                                    <option value="Very High">🤯 Very High</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">
+                                <div class="btn-spinner" id="btnSpinner"></div>
+                                <i class="fa-solid fa-wand-magic-sparkles btn-arrow"></i>
+                                <span id="btnLabel">Predict My Score</span>
+                            </span>
+                        </button>
+
+                    </form>
+                </section>
+
+                <!-- ══ RESULT PANEL ══ -->
+                <section class="result-panel" aria-label="Prediction Result" aria-live="polite">
+
+                    <span class="result-badge">
+                        <i class="fa-solid fa-chart-line"></i>
+                        Wellbeing Score
+                    </span>
+
+                    <!-- SVG Gauge -->
+                    <div class="gauge-container">
+                        <svg class="progress-ring" width="220" height="220" viewBox="0 0 220 220">
+                            <defs>
+                                <linearGradient id="gradientScore" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%"   stop-color="#4f46e5"/>
+                                    <stop offset="50%"  stop-color="#818cf8"/>
+                                    <stop offset="100%" stop-color="#06b6d4"/>
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Background ring -->
+                            <circle class="progress-ring__circle-bg"
+                                    stroke-width="14" fill="transparent"
+                                    r="90" cx="110" cy="110"/>
+                            <!-- Score ring -->
+                            <circle class="progress-ring__circle" id="scoreCircle"
+                                    stroke-width="14" fill="transparent"
+                                    r="90" cx="110" cy="110"
+                                    filter="url(#glow)"/>
+                        </svg>
+
+                        <!-- Center Score Display -->
+                        <div class="gauge-inner">
+                            <span class="score-value" id="scoreValue">--</span>
+                            <span class="score-denom">out of 10</span>
+                        </div>
+                    </div>
+
+                    <!-- Score Category -->
+                    <div class="score-category" id="scoreCategory">Excellent</div>
+
+                    <!-- Status Message -->
+                    <div class="status-box">
+                        <p class="status-text" id="resultStatus">
+                            Fill in your details and click Predict to see your score.
+                        </p>
+                    </div>
+
+                </section>
+
+            </div>
+        </main>
+
+    </div><!-- /app-wrapper -->
+
+    <script src="script.js"></script>
+</body>
+</html>
