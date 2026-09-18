@@ -36,10 +36,8 @@ FEATURE_COLUMNS = [
 
 # ── Routes ───────────────────────────────────────────────────────────────────
 @app.route("/", methods=["GET"])
-def health_check():
-    """Simple health-check endpoint."""
-    status = "loaded" if model is not None else "not loaded"
-    return jsonify({"status": "ok", "model": status})
+def home():
+    return render_template("index.html")
 
 
 @app.route("/predict", methods=["POST"])
